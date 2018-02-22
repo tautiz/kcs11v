@@ -1,0 +1,79 @@
+.conteineris {
+    height: 100%;
+}
+.pagrindinis_turinys {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.profilio_foto, .biografija {
+     float: left;
+ }
+.profilio_foto {
+    width: 30%;
+}
+.biografija {
+    margin-left: 1%;
+    width: 69%
+}
+
+.socialiniai_puslapiai .puslapis {
+    float: left;
+    width: 33%;
+}
+.puslapis{
+    text-align: center;
+}
+.puslapis a{
+    display: block;
+}
+.tevukas {
+    display: flow-root;
+}
+
+.lentele, input[name="submitas"] {
+    float: left;
+}
+
+.lentele {
+    width: 70%;
+}
+
+input[name="submitas"]{
+    width: 30%;
+}
+input[type="submit"]{
+    height: 130px;
+    font-size: 30px;
+}
+
+.eilute {
+    width: 100%;
+    height: 50px;
+}
+.stulpelis {
+    float: left;
+}
+.s1 {
+    width: 45%;
+    padding-top: 5px;
+}
+
+
+input {
+    padding: 5px 15px;
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #d7d2d2;
+}
+.s1 label{
+    font-size: 24px;
+}
+
+#zinute {
+    padding: 3%;
+    font-size: 16px;
+    width: 94%;
+    height: 200px;
+}
