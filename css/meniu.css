@@ -1,0 +1,6 @@
+.meniu {
+    list-style: none;
+}
+.meniu li {
+    float: left;
+}

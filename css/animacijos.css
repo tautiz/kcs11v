@@ -1,0 +1,24 @@
+@keyframes spalvospasikeitimas {
+    0% {
+        background-color: white;
+    }
+    30%{
+        background-color: darkturquoise;
+    }
+    50% {
+        background-color: brown;
+    }
+    80% {
+        background-color: chartreuse;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+textarea:hover {
+    background-color: white;
+    animation-name: spalvospasikeitimas;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

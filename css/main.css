@@ -77,3 +77,14 @@ input {
     width: 94%;
     height: 200px;
 }
+
+.puslapis:nth-child(2){
+    background-color: brown;
+}
+
+.profilio_foto:hover {
+    box-shadow: 0 0 5px 5px darkgrey;
+}
+.profilio_foto:active {
+    box-shadow: 0 0 2px 2px grey;
+}
