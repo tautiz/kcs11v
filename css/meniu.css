@@ -1,6 +1,27 @@
+nav {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+nav img[alt="Logo"] {
+    height: 90%;
+}
 .meniu {
     list-style: none;
+    display: inline;
+    float: right;
+    margin-right: 20px;
+}
+.meniu li:first-child {
+    border-left: none;
 }
 .meniu li {
     float: left;
+    margin-left: 10px;
+    border-left: 1px solid white;
+    padding-left: 10px;
 }
+
