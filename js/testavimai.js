@@ -61,3 +61,12 @@ function toggleTimer() {
     }
     timer_state = !timer_state;
 }
+
+
+
+var objs = document.getElementsByClassName("puslapis");
+
+for (var i = 0; i < objs.length; ++i) {
+    item = objs[i];
+    item.style.backgroundColor = "brown";
+}

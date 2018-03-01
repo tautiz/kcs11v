@@ -7,34 +7,41 @@
     <link rel="stylesheet" href="/css/animacijos.css">
     <link rel="stylesheet" href="/css/meniu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+
 </head>
 <body>
 <nav>
     <img src="img/kcs_logo.png" alt="Logo" id="logo" onclick="toggleTimer()">
-    <ul class="meniu">
-        <li class="meniu_item">Apie</li>
-        <li class="meniu_item">Darbai</li>
-        <li class="meniu_item">Kontaktai</li>
+    <ul class="meniu manoTabai" role="tablist">
+        <li class="meniu_item"><a href="#apie" aria-controls="apie" role="tab" data-toggle="tab">Apie</a></li>
+        <li class="meniu_item"><a href="#darbai" aria-controls="darbai" role="tab" data-toggle="tab">Darbai</a></li>
+        <li class="meniu_item"><a href="#kontaktai" aria-controls="kontaktai" role="tab" data-toggle="tab">Kontaktai</a>
+        </li>
     </ul>
 </nav>
-<div class="conteineris meniuAtitraukimas">
-    <div class="pagrindinis_turinys">
 
+<div class="conteineris meniuAtitraukimas tab-content">
+    <div class="pagrindinis_turinys apiemane tab-pane active" role="tabpanel" id="apie">
         <h1>Labas aš Tautvydas</h1>
-
         <div class="tevukas">
             <img class="profilio_foto" src="img/profilis.jpg" onclick="toggleElements()"/>
             <div class="biografija">
                 Tai mano pirmasis puslapis :) ir labai trumpa autobiografija orem Ipsum is simply dummy text of the
                 printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
                 the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only <a href="#">five centuries</a>, but also the leap into electronic typesetting, remaining
+                It has survived not only <a href="#">five centuries</a>, but also the leap into electronic typesetting,
+                remaining
                 essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
                 Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
                 versions of Lorem Ipsum. orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the industry's standard dummy text ever since the
             </div>
         </div>
+    </div>
+    <div class="pagrindinis_turinys darbai tab-pane" role="tabpanel" id="darbai">
         <hr/>
         <div class="socialiniai_puslapiai tevukas">
             <div class="puslapis">
@@ -59,42 +66,62 @@
                 </a>
             </div>
         </div>
-        <hr/>
-
-        <form action="" method="post">
-            <div class="lentele">
-                <div class="eilute">
-                    <div class="stulpelis s1">
-                        <label for="vardas">Jusu vardas:</label>
-                    </div>
-                    <div class="stulpelis">
-                        <input name="firstname" id="vardas" type="text" value="Testas"/>
-                    </div>
-                </div>
-                <div class="eilute">
-                    <div class="stulpelis s1">
-                        <label for="pastas">Jusu elpaštas:</label>
-                    </div>
-                    <div class="stulpelis">
-                        <input name="emailas" id="pastas" type="text" value="Testas"/>
-                    </div>
-                </div>
-                <div class="eilute">
-                    <div class="stulpelis s1">
-                        <label for="zinute">Jusu zinute mums:</label>
-                    </div>
-                </div>
-            </div>
-            <input name="submitas" type="submit" value="siusti"/>
-            <textarea name="message" id="zinute">The cat was playing in the garden.</textarea>
-        </form>
-
-        <hr/>
-        Visos teisė saugomos &copy; 2018
-
     </div>
+    <div class="pagrindinis_turinys kontaktai tab-pane" role="tabpanel" id="kontaktai">
+        <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs manoTabai" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                                                          data-toggle="tab">Demo1</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                                           data-toggle="tab">Demo2</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>
+                </li>
+            </ul>
+        </div><!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">Demo1</div>
+            <div role="tabpanel" class="tab-pane" id="profile">Demo2 tekstas</div>
+            <div role="tabpanel" class="tab-pane" id="messages">
+                <form action="" method="post">
+                    <div class="lentele">
+                        <div class="eilute">
+                            <div class="stulpelis s1">
+                                <label for="vardas">Jusu vardas:</label>
+                            </div>
+                            <div class="stulpelis">
+                                <input name="firstname" id="vardas" type="text" value="Testas"/>
+                            </div>
+                        </div>
+                        <div class="eilute">
+                            <div class="stulpelis s1">
+                                <label for="pastas">Jusu elpaštas:</label>
+                            </div>
+                            <div class="stulpelis">
+                                <input name="emailas" id="pastas" type="text" value="Testas"/>
+                            </div>
+                        </div>
+                        <div class="eilute">
+                            <div class="stulpelis s1">
+                                <label for="zinute">Jusu zinute mums:</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input name="submitas" type="submit" value="siusti"/>
+                    <textarea name="message" id="zinute">The cat was playing in the garden.</textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    Visos teisė saugomos &copy; 2018
 </div>
 
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 <script src="/js/testavimai.js"></script>
+<script src="js/tabai.js"></script>
+
+
 </body>
 </html>
